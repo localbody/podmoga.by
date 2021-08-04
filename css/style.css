@@ -1,0 +1,273 @@
+/*
+* { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+* * * * * * * { background-color: rgba(255,0,0,.2); }
+* * * * * * * * { background-color: rgba(0,255,0,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); }
+*/
+
+
+/*
+    yellow FFC61A
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/ubuntu-light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/ubuntu-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/ubuntu-medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/ubuntu-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-rendering: auto;
+    background-color: #171717;
+    min-width: 320px;
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    color: white;
+}
+
+.wrapper {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.cart {
+    width: 300px;
+    min-height: 300px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.cart__title {
+    width: 260px;
+    height: 200px;
+    display: block;
+    border: 2px solid #FFC61A;
+    border-radius: 9px;
+    position: relative;
+    margin: 0 auto;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.cart__image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    border-radius: 9px;
+}
+.cart__image-wrapper::after {
+    content: "";
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 33%;
+}
+
+.cart__image {
+    width: 100%;
+    height: 100%;
+}
+
+
+.cart__info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 10px;
+    border-radius: 9px;
+}
+
+.cart__from {
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.cart__who {
+    font-size: 1.25em;
+    text-align: center;
+    font-weight: 500;
+}
+
+.cart__price {
+    text-align: right;
+}
+
+.cart__body {
+    width: 100%;
+    border: 2px solid #FFC61A;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-top: none;
+
+    padding: 20px;
+}
+
+.cart__body::before {
+    content: "";
+
+    width: 100%;
+    height: 100px;
+
+    border: 2px solid #FFC61A;
+    border-bottom: none;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+
+    position: absolute;
+    left: 0;
+    top: 100px;
+}
+
+.cart__addinfo {
+    margin-bottom: 20px;
+}
+
+.cart__evakuator,
+.cart__go {
+    text-align: center;
+    font-size: 0.7em;
+}
+
+.cart__phones {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart__phone {
+    background-color: #FFC61A;
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #171717;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+
+    border-radius:24px;
+
+    text-align: center;
+
+    width: 100%;
+}
+
+.cart__phone span {
+    width: 100%;
+    padding-right: 24px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2em;
+
+}
+
+.cart__phone::before {
+    content: "";
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.cart__phone--short::before {
+    background-image: url(../images/phone.svg);
+}
+.cart__phone--a1::before {
+    background-image: url(../images/a1.svg);
+}
+.cart__phone--mts::before {
+    background-image: url(../images/mts.svg);
+}
+.cart__phone--life::before {
+    background-image: url(../images/life.svg);
+}
+
+.cart__messangers {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cart__messanger {
+    width: 48px;
+    height: 48px;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.cart__messanger--tg {
+    background-image: url(../images/tg.svg);
+}
+.cart__messanger--viber {
+    background-image: url(../images/viber.svg);
+}
+.cart__messanger--wa {
+    background-image: url(../images/wa.svg);
+}
