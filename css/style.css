@@ -152,6 +152,15 @@ body {
     bottom: 10px;
 }
 
+.cart__info--tap::after {
+    background-image: url(../images/tap.svg);
+}
+
+
+.cart__info--white::after {
+    background-image: url(../images/arrow--white.svg);
+}
+
 .cart__from {
     text-align: center;
     font-size: 0.8em;
