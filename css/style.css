@@ -141,6 +141,17 @@ body {
     width: 100%;
 }
 
+.cart__info::after {
+    content: "";
+    width: 48px;
+    height: 48px;
+    background-image: url(../images/arrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 10px;
+}
+
 .cart__from {
     text-align: center;
     font-size: 0.8em;
