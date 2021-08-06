@@ -69,7 +69,6 @@ h4 {
 
 body {
     text-rendering: auto;
-    background-color: #171717;
     min-width: 320px;
     font-family: 'Ubuntu', sans-serif;
     font-style: normal;
@@ -78,18 +77,19 @@ body {
 }
 
 .wrapper {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
 }
 
 .cart {
     width: 300px;
-    min-height: 300px;
-    position: relative;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
 }
 
 .cart__title {
@@ -100,14 +100,9 @@ body {
     border-radius: 9px;
     position: relative;
     margin: 0 auto;
-    z-index: 1;
     cursor: pointer;
 
-    /* border: 0; */
-    /* border-right: 1px solid #171717;
-    border-bottom: 1px solid #171717; */
-    /* box-shadow: 1px 3px 3px rgb(100 100 100 / 50%); */
-    /* box-shadow: inset 1px 1px 0 #171717, 0 2px 3px rgb(255 255 255 / 50%); */
+    box-shadow: 5px 5px 7px 0px rgb(23 23 23 / 33%)
 
 }
 
@@ -120,6 +115,7 @@ body {
     overflow: hidden;
     border-radius: 9px;
 }
+
 .cart__image-wrapper::after {
     content: "";
     background-color: black;
@@ -129,6 +125,17 @@ body {
     left: 0;
     top: 0;
     opacity: 33%;
+
+    box-shadow:
+    /* 0 15px 25px -4px rgba(0,0,0,0.5), */
+    inset 0 -3px 4px -1px rgba(0,0,0,0.2),
+    /* 0 -10px 15px -1px rgba(255,255,255,0.6), */
+    inset 0 3px 4px -1px rgba(255,255,255,0.2),
+    inset 0 0 5px 1px rgba(255,255,255,0.8),
+    inset 0 20px 30px 0 rgba(255,255,255,0.2)
+
+    /* box-shadow: none; */
+
 }
 
 .cart__image {
@@ -175,33 +182,30 @@ body {
 
 .cart__price {
     text-align: right;
+    font-size: 1.3em;
 }
 
 .cart__body {
-    width: 100%;
-    border: 2px solid #FFC61A;
-    border-bottom-right-radius: 9px;
-    border-bottom-left-radius: 9px;
-    border-top: none;
-
-    padding: 20px;
-}
-
-.cart__body::before {
-    content: "";
+    background-color: #171717;
 
     width: 100%;
-    height: 100px;
-
     border: 2px solid #FFC61A;
-    border-bottom: none;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
+    border-radius: 9px;
 
-    position: absolute;
-    left: 0;
-    top: 100px;
+    padding: 120px 20px 20px 20px;
+
+    margin-top: -100px;
+
+    flex: 1 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    box-shadow: 5px 5px 7px 0px rgb(23 23 23 / 33%)
+
 }
+
 
 .cart__addinfo {
     margin-bottom: 20px;
@@ -210,7 +214,7 @@ body {
 .cart__evakuator,
 .cart__go {
     text-align: center;
-    font-size: 0.7em;
+    font-size: 0.85em;
 }
 
 .cart__phones {
@@ -268,6 +272,16 @@ body {
     background-position: center;
     background-size: 50%;
     background-repeat: no-repeat;
+
+    box-shadow:
+    /* 0 15px 25px -4px rgba(0,0,0,0.5), */
+    inset 0 -3px 4px -1px rgba(0,0,0,0.2),
+    /* 0 -10px 15px -1px rgba(255,255,255,0.6), */
+    inset 0 3px 4px -1px rgba(255,255,255,0.2),
+    inset 0 0 5px 1px rgba(255,255,255,0.8),
+    inset 0 20px 30px 0 rgba(255,255,255,0.2);
+
+    /* box-shadow: none; */
 }
 
 .cart__phone--short::before {
