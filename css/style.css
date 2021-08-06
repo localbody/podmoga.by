@@ -116,6 +116,8 @@ body {
     right: 0;
     overflow: hidden;
     border-radius: 9px;
+
+    box-shadow: 0px ;
 }
 
 .cart__image-wrapper::after {
@@ -127,6 +129,7 @@ body {
     left: 0;
     top: 0;
     opacity: 33%;
+    -khtml-opacity: 0.33;
 
     box-shadow:
     /* 0 15px 25px -4px rgba(0,0,0,0.5), */
